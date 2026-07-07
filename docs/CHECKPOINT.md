@@ -24,13 +24,22 @@ cd Pryanik && bash serve.sh 8000
 | `contacts.html` | О нас и контакты: форма, реквизиты |
 | `cart.html` | Корзина + оформление: шаги Корзина → Доставка → Оплата → Готово |
 
+## Структура папок
+- `*.html` — страницы, в **корне** (требование GitHub Pages: сайт с main/root).
+- `assets/css/styles.css`, `assets/js/{app,products}.js` — стили и скрипты.
+- `media/` — все медиа (`products/`, `video/`).
+- `docs/` — вся документация (`0X-*.md`, `CHECKPOINT.md`, `CLAUDE.md`, `checklist.txt`).
+- В корне также: `presentation.pdf`, `serve.sh`, `.nojekyll`.
+- ⚠️ `CLAUDE.md` теперь в `docs/` — как авто-инструкции проекта в Pryanik/ больше не подхватывается.
+- `script.js` в корне — осиротевший (нигде не подключён), можно удалить.
+
 ## Общие файлы
 | Файл | Назначение |
 |------|------------|
-| `styles.css` | Дизайн-система (Baloo 2 / Nunito), адаптив, переходы (View Transitions) |
-| `products.js` | Данные каталога (WB) + хелперы корзины (localStorage) |
-| `app.js` | Шапка/меню, тема, бейдж корзины, добавление в корзину, reveal-анимации |
-| `media/` | Все медиа: `products/` — 14×4 фото товаров с WB |
+| `assets/css/styles.css` | Дизайн-система (Comfortaa / Nunito), адаптив, WCAG AA |
+| `assets/js/products.js` | Данные каталога (WB) + хелперы корзины (localStorage) |
+| `assets/js/app.js` | Шапка/меню, бейдж корзины, добавление в корзину, reveal-анимации |
+| `media/` | Все медиа: `products/` — 14×4 фото товаров с WB, `video/` — ролики |
 | `presentation.pdf` | PDF главной для презентации |
 
 ## Корзина
